@@ -1,0 +1,14 @@
+#!/bin/bash
+read -p "vill du konvertera från från kronor eller dollar [k|d] " Valuta
+read -p "hur många $Valuta " Belopp
+if [ $Valuta = k ]; then
+       let Svar="$Belopp*6"
+       echo "$belopp $Valuta = $Svar usd" #detta är us dollar 
+   
+   elif [ $valuta ="Usd" ]; then
+       let Svar="$Belopp/6"
+       let Rest="$Belopp%6"
+       echo "$Belopp $valuta = $Svar.$Rest kronor" #kronor
+   fi
+exit 0
+

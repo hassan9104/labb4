@@ -1,0 +1,27 @@
+#!/bin/bash
+read -p "mata in tal 1:" Tal1
+read -p "mata in tal 2:" Tal2
+let Summa="$Tal1 + $Tal2"
+   echo "$Tal1 + $Tal2 = $Summa"
+let Minus="$Tal1 - $Tal2"
+   echo "$Tal1 - $Tal2 = $Minus"
+let Diff="$Tal1 * $Tal2" 
+   echo "$Tal1 * $Tal2 = $Diff"
+let Delat="$Tal1 / $Tal2"
+   echo "$Tal1 / $Tal2 = $Delat"
+
+
+read -p "vill du konvertera från från kronor eller dollar [k|d] " Valuta
+read -p "hur många $Valuta " Belopp
+ 
+if [ $Valuta = k ]; then
+let Svar="$Belopp*6"
+    echo "$belopp $Valuta = $Svar usd" #detta är us dollar 
+                     
+elif [ $valuta ="Usd" ]; then
+let Svar="$Belopp/6"
+let Rest="$Belopp%6"
+    echo "$Belopp $valuta = $Svar.$Rest kronor" #kronor
+fi
+exit 0
+

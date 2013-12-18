@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p "mata in tal 1:" Tal1
+read -p "mata in tal 2:" Tal2
+let Summa="$Tal1 + $Tal2"
+echo "$Tal1 + $Tal2 = $Summa"
+let Minus="$Tal1 - $Tal2"
+echo "$Tal1 - $Tal2 = $Minus"
+let Diff="$Tal1 * $Tal2" 
+echo "$Tal1 * $Tal2 = $Diff"
+let Delat="$Tal1 / $Tal2"
+echo "$Tal1 / $Tal2 = $Delat"
+exit 0
